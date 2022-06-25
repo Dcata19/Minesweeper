@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minesweeper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <button onclick="createTable()" id="start"></button>
+    <div class="m-4 position-relative">
+      <div class="card position-absolute start-50 top-0 translate-middle-x" style="width: 23rem;">
+        <div class="card-body" id="parent" style="background-color: rgb(187, 214, 36);"></div>
+        <h1 class="text-center" id="message"></h1>
+        <h5 id="flags"></h5> 
+      </div>     
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

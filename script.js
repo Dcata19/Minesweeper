@@ -51,7 +51,7 @@ function clickCell(i, j) {
         document.getElementById(arr[i][j]).setAttribute("checked", true);
     } else {
         add(i, j);
-        revealEmptyCell();
+        revealEmptyCells();
     }
     checkWinning();
 }
@@ -89,8 +89,8 @@ function add(i, j) {
     }
 }
 
-//reveal empty cell
-function revealEmptyCell() {
+//reveal empty cells
+function revealEmptyCells() {
     for (let m = 0; m < emptyCell.length; m += 2) {
         if (checkMines(emptyCell[m], emptyCell[m + 1]) > 0) {
             document.getElementById(arr[emptyCell[m]][emptyCell[m + 1]]).value = checkMines(emptyCell[m], emptyCell[m + 1]);

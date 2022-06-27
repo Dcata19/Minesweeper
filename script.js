@@ -89,7 +89,7 @@ function add(i, j) {
     }
 }
 
-//reveal empty cell of a cell
+//reveal empty cell
 function revealEmptyCell() {
     for (let m = 0; m < emptyCell.length; m += 2) {
         if (checkMines(emptyCell[m], emptyCell[m + 1]) > 0) {

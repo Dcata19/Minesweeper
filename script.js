@@ -50,7 +50,7 @@ function clickCell(i, j) {
         document.getElementById(arr[i][j]).style.background = "#BFBFBF";
         document.getElementById(arr[i][j]).setAttribute("checked", true);
     } else {
-        add(i, j);
+        addNeighbours(i, j);
         revealEmptyCells();
     }
     checkWinning();
@@ -74,7 +74,7 @@ function checkMines(i, j) {
 }
 
 //if a cell is empty, its neighbors are added to an array
-function add(i, j) {
+function addNeighbours(i, j) {
     for (let l = i - 1; l <= i + 1; ++l) {
         if (l >= 0 && l < 8) {
             for (let c = j - 1; c <= j + 1; ++c) {
@@ -98,7 +98,7 @@ function revealEmptyCells() {
             document.getElementById(arr[emptyCell[m]][emptyCell[m + 1]]).setAttribute("checked", true);
         } else {
             document.getElementById(arr[emptyCell[m]][emptyCell[m + 1]]).style.background = "#BFBFBF";
-            add(emptyCell[m], emptyCell[m + 1]);
+            addNeighbours(emptyCell[m], emptyCell[m + 1]);
         }
         checkWinning();
     }
